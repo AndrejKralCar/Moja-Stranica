@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Контакт - Андреј Грујоски</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(to right, #f8f9fa, #e9ecef);
+  color: #333;
+}
+
+header {
+  background-color: #1d3557;
+  color: white;
+  text-align: center;
+  padding: 25px 0;
+  font-size: 1.8em;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+nav {
+  background-color: #264673;
+  text-align: center;
+}
+
+nav a {
+  color: #f1f1f1;
+  text-decoration: none;
+  padding: 14px 25px;
+  display: inline-block;
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+nav a:hover {
+  background-color: #1abc9c;
+  color: #fff;
+}
+
+nav a.active {
+  background-color: #1abc9c;
+  color: #fff;
+}
+
+main {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 40px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  animation: fadeIn 1s ease-out;
+  text-align: center;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+  color: #1d3557;
+  margin-bottom: 20px;
+}
+
+p {
+  color: #444;
+  font-size: 1.1em;
+  margin-bottom: 30px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.social-links a {
+  font-size: 2.5em;
+  color: #1d3557;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.social-links a:hover {
+  color: #1abc9c;
+  transform: scale(1.15);
+}
+
+.contact-info {
+  background-color: #f8f9fa;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  display: inline-block;
+  text-align: left;
+}
+
+.contact-info p {
+  font-size: 1.05em;
+  color: #333;
+  margin: 10px 0;
+}
+
+.contact-info i {
+  color: #1abc9c;
+  margin-right: 10px;
+}
+
+footer {
+  text-align: center;
+  background-color: #1d3557;
+  color: white;
+  padding: 15px 0;
+  font-size: 0.9em;
+  margin-top: 40px;
+}
+
+</style>
+</head>
+<body>
+
+<header>Контакт</header>
+
+<nav>
+  <a href="index.html">Дома</a>
+  <a href="Информации.html">Информации</a>
+  <a href="#" class="active">Контакт</a>
+</nav>
+
+<main>
+  <h1>📞 Контакт информации</h1>
+  <p>Доколку сакаш да ме контактираш или да ме следиш на социјалните мрежи, можеш да ме најдеш овде 👇</p>
+
+  <div class="social-links">
+    <a href="https://www.facebook.com/GtujoskiAnd" target="_blank"><i class="fab fa-facebook"></i></a>
+    <a href="https://www.instagram.com/andrejj_v2/" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://discord.com/users/1313898443760209980" target="_blank"><i class="fab fa-discord"></i></a>
+    <a href="mailto:andrejgrujoski11@gmail.com"><i class="fas fa-envelope"></i></a>
+  </div>
+
+  <div class="contact-info">
+    <p><i class="fas fa-user"></i><strong>Име и презиме:</strong> Андреј Грујоски</p>
+    <p><i class="fas fa-envelope"></i><strong>Е-пошта:</strong> andrejgrujoski11@gmail.com</p>
+    <p><i class="fas fa-phone"></i><strong>Телефон:</strong> 076 527 800</p>
+    <p><i class="fas fa-map-marker-alt"></i><strong>Локација:</strong> Гостивар, Македонија</p>
+  </div>
+
+</main>
+
+<footer>
+  © 2025 Андреј Грујоски | Сите права се задржани
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Информации - Андреј Грујоски</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(to right, #f8f9fa, #e9ecef);
+  color: #333;
+}
+
+header {
+  background-color: #1d3557;
+  color: white;
+  text-align: center;
+  padding: 25px 0;
+  font-size: 1.8em;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+nav {
+  background-color: #264673;
+  text-align: center;
+}
+
+nav a {
+  color: #f1f1f1;
+  text-decoration: none;
+  padding: 14px 25px;
+  display: inline-block;
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+nav a:hover {
+  background-color: #1abc9c;
+  color: #fff;
+}
+
+nav a.active {
+  background-color: #1abc9c;
+  color: #fff;
+}
+
+main {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 40px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  animation: fadeIn 1s ease-out;
+}
+
+h1 {
+  text-align: center;
+  color: #1d3557;
+  margin-bottom: 25px;
+}
+
+.info-text p {
+  line-height: 1.8;
+  font-size: 1.1em;
+  margin-bottom: 25px;
+  color: #444;
+}
+
+.info-text span {
+  color: #1abc9c;
+  font-weight: 600;
+}
+
+.symbol {
+  color: #e67e22;
+  font-weight: bold;
+}
+
+/* Стил за слики лево или десно */
+.float-left, .float-right {
+  width: 180px;
+  border-radius: 12px;
+  margin: 0 20px 20px 0;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.float-right {
+  float: right;
+  margin: 0 0 20px 20px;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-left:hover, .float-right:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.2);
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+footer {
+  text-align: center;
+  background-color: #1d3557;
+  color: white;
+  padding: 15px 0;
+  font-size: 0.9em;
+  margin-top: 40px;
+}
+
+@media(max-width: 900px) {
+  .float-left, .float-right {
+    float: none;
+    display: block;
+    margin: 0 auto 20px auto;
+    width: 80%;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>Информации за мене</header>
+
+<nav>
+  <a href="index.html">Дома</a>
+  <a href="#" class="active">Информации</a>
+  <a href="Контакт.html">Контакт</a>
+</nav>
+
+<main>
+<h1>Запознај го Андреј 👋</h1>
+
+<div class="info-text clearfix">
+  <p>
+    <img src="https://i.ibb.co/3YskKm8Z/566378858-1061211805962651-5026661434572922708-n.jpg" class="float-left" alt="Јас како мал">
+    🎉 Јас сум <span>Андреј Грујоски</span>, роден на <span>10 март 2008 година</span>. Од најмала возраст сум љубопитен и полн со енергија – секогаш ме фасцинирале технологијата, игрите и начинот на кој функционираат нештата. 🎮 Играв многу видеоигри како дете, а и денес често се опуштам со <span>GTA V</span>.
+  </p>
+
+  <p>
+    <img src="https://i.ibb.co/7t5XfgH7/Untitled-design.png" class="float-right" alt="Математика и програмирање">
+    💻 Со текот на времето, развив голема љубов кон <span>математиката</span> и <span>програмирањето</span>. Ми се допаѓа логиката, решавањето проблеми и чувството кога нешто што сум создал – функционира токму онака како што сум го замислил. Особено ми се интересни програмските јазици како <span>C++</span> и создавањето веб страници со <span>HTML</span> и <span>CSS</span>.
+  </p>
+
+  <p>
+    🧮 Математиката не ми е само предмет – таа е мојот начин на размислување. Кога решавам задачи, чувствувам мир и фокус – секое решение е како мала победа над хаосот. Мојата омилена формула е <span>квадратната равенка</span> 📐.
+  </p>
+
+  <p>
+    <img src="https://i.ibb.co/HDsSgvwp/554883605-2273478479832537-4537601462038327074-n.jpg" class="float-left" alt="Како голем">
+    🏫 Во моментот учам во <span>СОУ „Гостивар“</span> и секојдневно се трудам да се подобрувам во сè што правам. Се разбирам многу добро од компјутери и планирам иднина поврзана со технологијата или програмирањето.
+  </p>
+
+  <p>
+    🌿 Надвор од компјутерите, мојот живот е исполнет со природа и активности. Во слободно време одам на <span>риболов</span>, уживам во <span>смиреноста на водата</span> и во моментите кога тишината зборува повеќе од зборовите. 🕊️ Чувам и <span>гулаби</span> – тие ме научија на трпение и грижа.
+  </p>
+
+  <p>
+    <img src="https://i.ibb.co/4ZRdz5XV/553754900-4131592350429763-1308419985156681250-n.jpg" class="float-right" alt="Интересни моменти">
+    🍔 Моето омилено јадење е <span>хамбургер од Амиго со љуто</span>, а освежителен пијалок е <span>Фанта зелена</span>. ♓ Во хороскоп сум <span>Риби</span>, интуитивен и креативен.
+  </p>
+
+  <p>
+    👊 Следам <span>MMA</span> 🥊 бидејќи ми се допаѓа дисциплината, силата и посветеноста на спортистите.  
+    📺 А кога сакам да се опуштам, гледам серии — моите омилени се <span>Game of Thrones</span> и <span>La Casa De Papel</span>. 🔥
+  </p>
+
+  <p>
+    ✨ Сè што правам, го правам со љубов и посветеност. Верувам дека секој ден е нова шанса да научам нешто повеќе, да станам подобар и да ги претворам моите идеи во реалност. Оваа страница е само мал дел од мојата приказна – приказна што сè уште се пишува, чекор по чекор.
+  </p>
+
+</div>
+</main>
+
+<footer>
+© 2025 Андреј Грујоски | Сите права се задржани
+</footer>
+
+</body>
+</html>
