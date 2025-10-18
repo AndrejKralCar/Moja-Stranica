@@ -49,6 +49,7 @@ nav a.active {
   color: #fff;
 }
 
+/* Main секција */
 main {
   display: flex;
   align-items: center;
@@ -58,14 +59,8 @@ main {
   flex-wrap: wrap;
 }
 
-.image-section, .text-section {
-  opacity: 0;
-  transform: translateY(30px);
-  animation-fill-mode: forwards;
-}
-
 .image-section {
-  flex: 1 1 400px;
+  flex: 1 1 40%;
   text-align: center;
   animation: fadeUp 1s ease-out 0.3s forwards;
 }
@@ -86,7 +81,7 @@ main {
 }
 
 .text-section {
-  flex: 1 1 400px;
+  flex: 1 1 55%;
   animation: fadeUp 1s ease-out 0.6s forwards;
 }
 
@@ -123,7 +118,8 @@ main {
 }
 
 .interest-card {
-  flex: 1 1 250px;
+  flex: 1;
+  min-width: 250px;
   max-width: 300px;
   padding: 30px;
   border-radius: 20px;
@@ -165,22 +161,17 @@ main {
   100% { opacity: 1; transform: translateY(0); }
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  background-color: #1d3557;
-  color: white;
-  padding: 15px 0;
-  font-size: 0.9em;
-  margin-top: 40px;
-}
-
-/* Media Queries */
+/* Респонсивност */
 @media(max-width: 900px) {
   main {
-    flex-direction: column;
-    text-align: center;
+    flex-direction: row;
+    flex-wrap: wrap;
     padding: 50px 5%;
+  }
+
+  .image-section, .text-section {
+    flex: 1 1 100%;
+    text-align: center;
   }
 
   .text-section h1 {
@@ -189,7 +180,7 @@ footer {
 
   .image-section img {
     max-width: 300px;
-    margin-bottom: 30px;
+    margin: 0 auto 30px auto;
   }
 
   .interests {
@@ -198,16 +189,13 @@ footer {
   }
 }
 
-@media(max-width: 600px) {
-  .text-section h1 { font-size: 2em; }
-  .text-section p { font-size: 1em; line-height: 1.4; }
-  .image-section img { max-width: 90%; }
-  .interests { padding: 30px 5%; gap: 20px; }
-  .interest-card { max-width: 100%; }
-}
-
-@media(max-width: 450px) {
-  nav a { display: block; padding: 12px 0; }
+footer {
+  text-align: center;
+  background-color: #1d3557;
+  color: white;
+  padding: 15px 0;
+  font-size: 0.9em;
+  margin-top: 40px;
 }
 </style>
 </head>
@@ -232,12 +220,13 @@ footer {
   </div>
 </main>
 
+<!-- Секција со интереси -->
 <section class="interests">
   <div class="interest-card football">
     <img src="https://i.ibb.co/Hff2V9PK/Soccerball-svg.png" alt="Фудбал">
     <h3>Фудбал</h3>
     <p>Сакам да играм фудбал и да се движам активно.</p>
-  </div>
+  </div>  
   <div class="interest-card cpp">
     <img src="https://i.ibb.co/wF61pY7P/c-plus-plus-logo.png" alt="C++">
     <h3>C++</h3>
