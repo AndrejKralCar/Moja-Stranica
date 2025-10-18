@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Андреј Грујоски</title>
-  <link rel="icon" type="image/png" sizes="32x32" href="https://i.ibb.co/TBxkBcbD/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://i.ibb.co/TBxkBcbD/favicon-32x32.png">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 
@@ -55,7 +55,7 @@ main {
   justify-content: space-between;
   padding: 80px 10%;
   gap: 40px;
-  overflow: hidden;
+  flex-wrap: wrap;
 }
 
 .image-section, .text-section {
@@ -65,18 +65,17 @@ main {
 }
 
 .image-section {
-  flex: 1;
+  flex: 1 1 400px;
   text-align: center;
   animation: fadeUp 1s ease-out 0.3s forwards;
 }
 
 .image-section img {
-  width: 420px;
-  max-width: 90%;
+  width: 100%;
+  max-width: 420px;
   height: auto;
   border-radius: 15px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-  background-color: transparent;
   padding: 8px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -87,7 +86,7 @@ main {
 }
 
 .text-section {
-  flex: 1;
+  flex: 1 1 400px;
   animation: fadeUp 1s ease-out 0.6s forwards;
 }
 
@@ -114,23 +113,6 @@ main {
   100% { opacity: 1; transform: translateY(0); }
 }
 
-@media(max-width: 900px) {
-  main {
-    flex-direction: column;
-    text-align: center;
-    padding: 50px 5%;
-  }
-
-  .text-section h1 {
-    font-size: 2.4em;
-  }
-
-  .image-section img {
-    width: 300px;
-    margin-bottom: 30px;
-  }
-}
-
 /* Секција со интереси */
 .interests {
   display: flex;
@@ -141,8 +123,7 @@ main {
 }
 
 .interest-card {
-  flex: 1;
-  min-width: 250px;
+  flex: 1 1 250px;
   max-width: 300px;
   padding: 30px;
   border-radius: 20px;
@@ -184,13 +165,7 @@ main {
   100% { opacity: 1; transform: translateY(0); }
 }
 
-@media(max-width: 900px) {
-  .interests {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
+/* Footer */
 footer {
   text-align: center;
   background-color: #1d3557;
@@ -198,6 +173,41 @@ footer {
   padding: 15px 0;
   font-size: 0.9em;
   margin-top: 40px;
+}
+
+/* Media Queries */
+@media(max-width: 900px) {
+  main {
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 5%;
+  }
+
+  .text-section h1 {
+    font-size: 2.4em;
+  }
+
+  .image-section img {
+    max-width: 300px;
+    margin-bottom: 30px;
+  }
+
+  .interests {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media(max-width: 600px) {
+  .text-section h1 { font-size: 2em; }
+  .text-section p { font-size: 1em; line-height: 1.4; }
+  .image-section img { max-width: 90%; }
+  .interests { padding: 30px 5%; gap: 20px; }
+  .interest-card { max-width: 100%; }
+}
+
+@media(max-width: 450px) {
+  nav a { display: block; padding: 12px 0; }
 }
 </style>
 </head>
@@ -222,13 +232,12 @@ footer {
   </div>
 </main>
 
-<!-- Секција со интереси -->
 <section class="interests">
   <div class="interest-card football">
     <img src="https://i.ibb.co/Hff2V9PK/Soccerball-svg.png" alt="Фудбал">
     <h3>Фудбал</h3>
     <p>Сакам да играм фудбал и да се движам активно.</p>
-  </div>  
+  </div>
   <div class="interest-card cpp">
     <img src="https://i.ibb.co/wF61pY7P/c-plus-plus-logo.png" alt="C++">
     <h3>C++</h3>
