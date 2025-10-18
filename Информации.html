@@ -15,21 +15,44 @@ body {
   color: #333;
 }
 
+/* --- ХЕДЕР СО СЛИКА --- */
 header {
+  position: relative;
   background-color: #1d3557;
   color: white;
   text-align: center;
-  padding: 35px 0;
+  padding: 40px 0;
   font-size: 1.9em;
   font-weight: 600;
   letter-spacing: 1px;
+  overflow: hidden;
+}
 
-  /* Слика во хедер */
-  background-image: url('https://i.ibb.co/tpSjrxKd/1-removebg-preview.png');
-  background-repeat: no-repeat;
-  background-position: left center;
-  background-size: 130px 130px; /* 👉 зголемена слика */
-  padding-left: 150px; /* повеќе простор за текст */
+/* Сликата во хедерот */
+header::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%) scale(0.8);
+  width: 160px;
+  height: 160px;
+  background: url('https://i.ibb.co/tpSjrxKd/1-removebg-preview.png') no-repeat center center;
+  background-size: contain;
+  opacity: 0;
+  animation: fadeSlideIn 1.2s ease-out forwards;
+}
+
+/* Ефект за појава на сликата */
+@keyframes fadeSlideIn {
+  0% { opacity: 0; transform: translateY(-50%) translateX(-80px) scale(0.8); }
+  100% { opacity: 1; transform: translateY(-50%) translateX(0) scale(1); }
+}
+
+/* Празен лев простор за текстот да не влегува врз сликата */
+header span {
+  padding-left: 190px;
+  display: inline-block;
 }
 
 nav {
@@ -139,12 +162,22 @@ footer {
     margin: 0 auto 20px auto;
     width: 80%;
   }
+
+  header::before {
+    width: 120px;
+    height: 120px;
+    left: 10px;
+  }
+
+  header span {
+    padding-left: 150px;
+  }
 }
 </style>
 </head>
 <body>
 
-<header>Информации за мене</header>
+<header><span>Информации за мене</span></header>
 
 <nav>
   <a href="index.html">Дома</a>
