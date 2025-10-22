@@ -15,17 +15,33 @@ body {
   color: #333;
 }
 
-
 /* Ефект за појава на сликата */
 @keyframes fadeSlideIn {
   0% { opacity: 0; transform: translateY(-50%) translateX(-80px) scale(0.8); }
   100% { opacity: 1; transform: translateY(-50%) translateX(0) scale(1); }
 }
 
-/* Празен лев простор за текстот да не влегува врз сликата */
-header span {
-  padding-left: 190px;
-  display: inline-block;
+/* Стил за header-насловот */
+header {
+  position: relative;
+  background: linear-gradient(90deg, #1d3557, #457b9d);
+  color: white;
+  text-align: center;
+  padding: 60px 0;
+  font-size: 1.8em;
+  font-weight: 700;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  animation: slideDown 1.2s ease-out;
+}
+
+@keyframes slideDown {
+  0% { opacity: 0; transform: translateY(-40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+header h2 {
+  margin: 0;
 }
 
 nav {
@@ -135,22 +151,14 @@ footer {
     margin: 0 auto 20px auto;
     width: 80%;
   }
-
-  header::before {
-    width: 150px;
-    height: 150px;
-    left: 10px;
-  }
-
-  header span {
-    padding-left: 180px;
-  }
 }
 </style>
 </head>
 <body>
 
-<header><span>Информации за мене</span></header>
+<header>
+  <h2>Информации за мене</h2>
+</header>
 
 <nav>
   <a href="index.html">Дома</a>
@@ -207,5 +215,3 @@ footer {
 
 </body>
 </html>
-
-
