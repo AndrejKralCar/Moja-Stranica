@@ -15,33 +15,6 @@ body {
   color: #333;
 }
 
-/* --- ХЕДЕР СО СЛИКА --- */
-header {
-  position: relative;
-  background-color: #1d3557;
-  color: white;
-  text-align: center;
-  padding: 40px 0;
-  font-size: 1.9em;
-  font-weight: 600;
-  letter-spacing: 1px;
-  overflow: hidden;
-}
-
-/* Сликата во хедерот */
-header::before {
-  content: "";
-  position: absolute;
-  left: 20px;
-  top: 50%;
-  transform: translateY(-50%) scale(0.8);
-  width: 190px;
-  height: 190px;
-  background: url('https://i.ibb.co/tpSjrxKd/1-removebg-preview.png') no-repeat center center;
-  background-size: contain;
-  opacity: 0;
-  animation: fadeSlideIn 1.2s ease-out forwards;
-}
 
 /* Ефект за појава на сликата */
 @keyframes fadeSlideIn {
@@ -234,4 +207,5 @@ footer {
 
 </body>
 </html>
+
 
