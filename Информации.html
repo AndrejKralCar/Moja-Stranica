@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Информации за мене</title>
+<title>Информации - Андреј Грујоски</title>
 <link rel="icon" type="image/png" sizes="32x32" href="https://i.ibb.co/TBxkBcbD/favicon-32x32.png">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
@@ -15,7 +15,7 @@ body {
   color: #333;
 }
 
-/* Хедер – ист како на index.html */
+/* Header стил ист како на главната страница */
 header {
   background-color: #1d3557;
   color: white;
@@ -26,7 +26,6 @@ header {
   letter-spacing: 1px;
 }
 
-/* Навигација */
 nav {
   background-color: #264673;
   text-align: center;
@@ -51,75 +50,81 @@ nav a.active {
   color: #fff;
 }
 
-/* Главна содржина */
 main {
-  padding: 70px 10%;
-  text-align: center;
-}
-
-main h1 {
-  font-size: 2.8em;
-  color: #1d3557;
-  margin-bottom: 20px;
-}
-
-main p {
-  font-size: 1.2em;
-  color: #444;
-  line-height: 1.6;
   max-width: 900px;
-  margin: 0 auto 40px;
-}
-
-.info-section {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 30px;
-}
-
-.info-card {
+  margin: 60px auto;
+  padding: 40px;
   background: white;
-  padding: 30px;
   border-radius: 20px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-  flex: 1;
-  min-width: 250px;
-  max-width: 300px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #1d3557;
+  margin-bottom: 25px;
+}
+
+.info-text p {
+  line-height: 1.8;
+  font-size: 1.1em;
+  margin-bottom: 25px;
+  color: #444;
+}
+
+.info-text span {
+  color: #1abc9c;
+  font-weight: 600;
+}
+
+.symbol {
+  color: #e67e22;
+  font-weight: bold;
+}
+
+.float-left, .float-right {
+  width: 180px;
+  border-radius: 12px;
+  margin: 0 20px 20px 0;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.info-card:hover {
+.float-right {
+  float: right;
+  margin: 0 0 20px 20px;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-left:hover, .float-right:hover {
   transform: scale(1.05);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.2);
 }
 
-.info-card h3 {
-  color: #1abc9c;
-  margin-bottom: 10px;
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
-/* Footer */
 footer {
   text-align: center;
   background-color: #1d3557;
   color: white;
   padding: 15px 0;
   font-size: 0.9em;
-  margin-top: 50px;
+  margin-top: 40px;
 }
 
-/* Респонсивност */
 @media(max-width: 900px) {
-  main h1 {
-    font-size: 2.2em;
-  }
-  main p {
-    font-size: 1em;
-  }
-  .info-section {
-    flex-direction: column;
-    align-items: center;
+  .float-left, .float-right {
+    float: none;
+    display: block;
+    margin: 0 auto 20px auto;
+    width: 80%;
   }
 }
 </style>
@@ -135,27 +140,50 @@ footer {
 </nav>
 
 <main>
-  <h1>Кој сум јас?</h1>
-  <p>Јас сум <strong>Андреј Грујоски</strong> — ученик, креативец и љубител на технологија, спорт и математика. Оваа страница ја направив за да ја покажам мојата љубов кон учење, програмирање и нови предизвици. 🚀</p>
+<h1>Запознај го Андреј 👋</h1>
 
-  <div class="info-section">
-    <div class="info-card">
-      <h3>📘 Образование</h3>
-      <p>Ученик кој сака да истражува, да учи нови работи и да биде најдобар во тоа што го прави.</p>
-    </div>
-    <div class="info-card">
-      <h3>💻 Интереси</h3>
-      <p>Програмирање, технологија, математика и видео игри — комбинација што ме инспирира.</p>
-    </div>
-    <div class="info-card">
-      <h3>⚽ Хоби</h3>
-      <p>Сакам да играм фудбал, да се дружам и секогаш да бидам активен.</p>
-    </div>
-  </div>
+<div class="info-text clearfix">
+  <p>
+    <img src="https://i.ibb.co/3YskKm8Z/566378858-1061211805962651-5026661434572922708-n.jpg" class="float-left" alt="Јас како мал">
+    🎉 Јас сум <span>Андреј Грујоски</span>, роден на <span>10 март 2008 година</span>. Од најмала возраст сум љубопитен и полн со енергија – секогаш ме фасцинирале технологијата, игрите и начинот на кој функционираат нештата. 🎮 Играв многу видеоигри како дете, а и денес често се опуштам со <span>GTA V</span>.
+  </p>
+
+  <p>
+    <img src="https://i.ibb.co/7t5XfgH7/Untitled-design.png" class="float-right" alt="Математика и програмирање">
+    💻 Со текот на времето, развив голема љубов кон <span>математиката</span> и <span>програмирањето</span>. Ми се допаѓа логиката, решавањето проблеми и чувството кога нешто што сум создал – функционира токму онака како што сум го замислил. Особено ми се интересни програмските јазици како <span>C++</span> и создавањето веб страници со <span>HTML</span> и <span>CSS</span>.
+  </p>
+
+  <p>
+    🧮 Математиката не ми е само предмет – таа е мојот начин на размислување. Кога решавам задачи, чувствувам мир и фокус – секое решение е како мала победа над хаосот. Мојата омилена формула е <span>квадратната равенка</span> 📐.
+  </p>
+
+  <p>
+    <img src="https://i.ibb.co/HDsSgvwp/554883605-2273478479832537-4537601462038327074-n.jpg" class="float-left" alt="Како голем">
+    🏫 Во моментот учам во <span>СОУ „Гостивар“</span> и секојдневно се трудам да се подобрувам во сè што правам. Се разбирам многу добро од компјутери и планирам иднина поврзана со технологијата или програмирањето.
+  </p>
+
+  <p>
+    🌿 Надвор од компјутерите, мојот живот е исполнет со природа и активности. Во слободно време одам на <span>риболов</span>, уживам во <span>смиреноста на водата</span> и во моментите кога тишината зборува повеќе од зборовите. 🕊️ Чувам и <span>гулаби</span> – тие ме научија на трпение и грижа.
+  </p>
+
+  <p>
+    <img src="https://i.ibb.co/4ZRdz5XV/553754900-4131592350429763-1308419985156681250-n.jpg" class="float-right" alt="Интересни моменти">
+    🍔 Моето омилено јадење е <span>хамбургер од Амиго со љуто</span>, а освежителен пијалок е <span>Фанта зелена</span>. ♓ Во хороскоп сум <span>Рибa</span>, интуитивен и креативен.
+  </p>
+
+  <p>
+    👊 Следам <span>MMA</span> бидејќи ми се допаѓа дисциплината, силата и посветеноста на спортистите.
+  </p>
+
+  <p>
+    ✨ Сè што правам, го правам со љубов и посветеност. Верувам дека секој ден е нова шанса да научам нешто повеќе, да станам подобар и да ги претворам моите идеи во реалност. Оваа страница е само мал дел од мојата приказна – приказна што сè уште се пишува, чекор по чекор.
+  </p>
+
+</div>
 </main>
 
 <footer>
-  © 2025 Андреј Грујоски | Сите права се задржани
+© 2025 Андреј Грујоски | Сите права се задржани
 </footer>
 
 </body>
